@@ -31,4 +31,24 @@ my_grades = [97.8, 93.0, 95.5, 87.9]
 
 The first method is generally preferred, and is really just a shortcut for the second.  Both the first and second method create empty lists that we can then add to later.  The third method creates a list with values already added.
 
-We can always change lists once they are created.  You may have noticed in the table above that we used the words **mutable** and **immutable**.  Mutable simply means that a variable can change once created.  Immutable means that once created, the values are fixed.  Whether you use a mutable or immutable data type depends a lot on the problem you are trying to solve.
+We can always change lists once they are created.  You may have noticed in the table above that we used the words **mutable** and **immutable**.  Mutable simply means that a variable can change once created.  Immutable means that once created, the values are fixed.  Whether you use a mutable or immutable data type depends a lot on the problem you are trying to solve.  Lists are mutable.
+
+So how do we work with information in a list?  As we mentioned above, with sequence types you can use the indice operators - `[]`.  So, if we wanted to access the first element from our `my_grades` list from above, we would write:
+
+```python
+my_grades[0]
+```
+
+or, to change the value to a new value:
+
+```python
+my_grades[0] = 99.9
+```
+
+Python provides the `len()` function to determine the length, or number of elements, in a list:
+
+```python
+print(len(my_grades))
+```
+
+would output `4`.  Notice that indexes in Python are **zero-based indexes**, meaning they start at 0 instead of 1.  This means that our `my_grades` list has indexes 0, 1, 2, and 3 - and no index 4.  Trying to access an element 4 would result in `IndexError: list index out of range` being printed on the console (or raised as an exception if this line were in a program).
