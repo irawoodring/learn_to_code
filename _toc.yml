@@ -1,0 +1,9 @@
+format: jb-book
+root: intro.md
+
+chapters:
+- file: introduction
+- file: chapter_one
+- file: chapter_two
+- file: chapter_three
+- file: glossary

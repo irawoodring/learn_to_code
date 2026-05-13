@@ -1,0 +1,16 @@
+version: 1
+project:
+  id: e7ed9990-e9ab-4472-923f-38c6e40adbc9
+  title: Learning to Code in the Age of AI
+  authors: [Ira Woodring]
+  exclude:
+    - .venv/**
+    - .git/**
+    - ._build/**
+site:
+  template: book-theme
+  parts:
+    primary_sidebar_footer: primary-sidebar-footer.md
+  options:
+    logo_text: Learning to Code in the Age of AI
+
