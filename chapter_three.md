@@ -51,4 +51,13 @@ Python provides the `len()` function to determine the length, or number of eleme
 print(len(my_grades))
 ```
 
-would output `4`.  Notice that indexes in Python are **zero-based indexes**, meaning they start at 0 instead of 1.  This means that our `my_grades` list has indexes 0, 1, 2, and 3 - and no index 4.  Trying to access an element 4 would result in `IndexError: list index out of range` being printed on the console (or raised as an exception if this line were in a program).
+would output `4`.  Notice that indexes in Python are **zero-based indexes**, meaning they start at 0 instead of 1.  This means that our `my_grades` list has indexes 0, 1, 2, and 3 - and no index 4.  Trying to access an element 4 would result in `IndexError: list index out of range` being printed on the console (or raised as an exception if this line were in a program).  You can practice working with lists in the box below; it is a Python implementation that runs in your browser, on your computer.  Don't worry about messing anything up - you can just refresh the page to start over! 
+
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&code=groceries%20%3D%20%5B%5D%0Avotes%20%3D%20list%28%29%0Amy_grades%20%3D%20%5B97.8%2C%2093.0%2C%2095.5%2C%2087.9%5D%0A""
+  width="100%"
+  height="100%"
+></iframe>
+
+
+
