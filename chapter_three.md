@@ -1,4 +1,4 @@
-# Chapter 3 - Collection Types
+# Chapter 3 - Collection Type Variables
 
 Sometimes we want to group values together and refer to the group with a name.  For instance, we might have a list of groceries we need to pickup at the store, or a group of phone numbers organized by name.  Python provides several built-in types that allow us to keep groups of values together.  These types are broken up into three categories - sequence types, mapping types, and set types.
 
