@@ -59,5 +59,22 @@ would output `4`.  Notice that indexes in Python are **zero-based indexes**, mea
   height="100%"
 ></iframe>
 
+We will have a full chapter on working with lists, as well as some sample code using a list to solve a problem.  In that chapter we will go over many of the built-in Python lists functions that make working with lists easier.
+
+## str
+
+Strings may not seem like a collection, but really they are.  They are simply a list of characters.  We use strings anytime we need to get information from or present information to the user.  Strings are a sequence type, as each character has an index and we can use all of the same indice operators as lists on strings.  Creating a string is simple, just surround your text with quotes.  Python doesn't care if you use single-quotes `'` or double quotes `"`, but a string has to be started and ended with the same quote type.  All of the following are valid Python strings:
+
+```python
+name = 'Mr. W'
+course = "CS1"
+message = f"Hi, my name is {name} and I teach {course}."
+string_with_quote = "I can't stand bananas."
+escaped_quote = "I said, \"Why, hello there.\""
+```
+
+The third style string is called an **f-string**.  These are formatted strings.  We can use an f-string anywhere we can use a normal string.  An f-string must start with an 'f'.  We can include a variable or other Python expression inside of the curly braces, and the output will be added to the string.  The above f-string results in "My name is Mr. W and I teach CS1."  We often use f-strings when we want to embed the value from a variable into a string.  It is much easier that converting a value to a string and then combining the strings together manually.
+
+The fourth string, `string_with_quote`, shows how we can embed a quote inside of a string.  Here we put a single quote inside of a string composed with double quotes, but we could do the opposite as well.  The string `escaped_quote` shows how we can embed a quote of one type inside of a string that is started and ended with that same type.  In this case, we **escape** the character we wish to embed - in this example the `"` - by placing a backslash "\" before it.
 
 
