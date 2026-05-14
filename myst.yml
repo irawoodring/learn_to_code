@@ -13,5 +13,5 @@ site:
     primary_sidebar_footer: primary-sidebar-footer.md
   options:
     logo_text: Learning to Code in the Age of AI
-    favicon: images/favicon.ico
+    favicon: ./images/favicon.ico
 
