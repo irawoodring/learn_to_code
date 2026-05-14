@@ -54,7 +54,7 @@ print(len(my_grades))
 would output `4`.  Notice that indexes in Python are **zero-based indexes**, meaning they start at 0 instead of 1.  This means that our `my_grades` list has indexes 0, 1, 2, and 3 - and no index 4.  Trying to access an element 4 would result in `IndexError: list index out of range` being printed on the console (or raised as an exception if this line were in a program).  You can practice working with lists in the box below; it is a Python implementation that runs in your browser, on your computer.  Don't worry about messing anything up - you can just refresh the page to start over! 
 
 <iframe
-  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&code=groceries%20%3D%20%5B%5D%0Avotes%20%3D%20list%28%29%0Amy_grades%20%3D%20%5B97.8%2C%2093.0%2C%2095.5%2C%2087.9%5D%0A""
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1&code=groceries%20%3D%20%5B%5D%0Avotes%20%3D%20list%28%29%0Amy_grades%20%3D%20%5B97.8%2C%2093.0%2C%2095.5%2C%2087.9%5D%0A"
   width="100%"
   height="100%"
 ></iframe>
@@ -77,4 +77,10 @@ The third style string is called an **f-string**.  These are formatted strings. 
 
 The fourth string, `string_with_quote`, shows how we can embed a quote inside of a string.  Here we put a single quote inside of a string composed with double quotes, but we could do the opposite as well.  The string `escaped_quote` shows how we can embed a quote of one type inside of a string that is started and ended with that same type.  In this case, we **escape** the character we wish to embed - in this example the `"` - by placing a backslash "\" before it.
 
+Escaping characters works in other ways as well.  For instance, if you wanted to print a tab stop, you could add `\t` to a string.  Adding `\n` adds a new line character.  Try out creating some sample strings in the terminal below!
 
+<iframe
+  src="https://jupyterlite.github.io/demo/repl/index.html?kernel=python&toolbar=1"
+  width="100%"
+  height="100%"
+></iframe>
