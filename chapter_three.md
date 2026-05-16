@@ -73,7 +73,7 @@ string_with_quote = "I can't stand bananas."
 escaped_quote = "I said, \"Why, hello there.\""
 ```
 
-The third style string is called an **f-string**.  These are formatted strings.  We can use an f-string anywhere we can use a normal string.  An f-string must start with an 'f'.  We can include a variable or other Python expression inside of the curly braces, and the output will be added to the string.  The above f-string results in "My name is Mr. W and I teach CS1."  We often use f-strings when we want to embed the value from a variable into a string.  It is much easier that converting a value to a string and then combining the strings together manually.
+The third style string is called an **f-string**.  These are formatted strings.  We can use an f-string anywhere we can use a normal string.  An f-string must start with an 'f'.  We can include a variable or other Python expression inside of the curly braces, and the output will be added to the string.  The above f-string results in "My name is Mr. W and I teach CS1."  We often use f-strings when we want to embed the value from a variable into a string.  It is much easier than converting a value to a string and then combining the strings together manually.
 
 The fourth string, `string_with_quote`, shows how we can embed a quote inside of a string.  Here we put a single quote inside of a string composed with double quotes, but we could do the opposite as well.  The string `escaped_quote` shows how we can embed a quote of one type inside of a string that is started and ended with that same type.  In this case, we **escape** the character we wish to embed - in this example the `"` - by placing a backslash "\" before it.
 
@@ -149,4 +149,35 @@ We could access and print the 3rd element (which would be the second index since
 ```python
 print(my_nums[2])		# Outputs 20
 ```
+
+## The Mapping Type
+
+Sometimes it doesn't make sense for us to refer to look up our data by number.  Think about a contact list for instance, you don't want to remember that your mom's phone number is at index 5.  Instead, you want to lookup based on her name.  In Python we do this with a **dictionary**.  We call a dictionary a mapping type because it maps keys to values - so in our example the key would be your mom's name, and the value would be her phone number.
+
+We create a dictionary in Python using the curly braces `{}`.  This is sometimes confusing to new programmers, because (as we will see in the next section), Python also uses curly braces for sets.  We can create an empty dictionary with the code:
+
+```python
+phone_numbers = {}
+```
+
+Or, we could create one with some values already added in:
+
+```python
+phone_numbers = {"Jenny": 6168675309, "Joe": 6165555555}
+```
+
+In the second example, our keys are "Jenny" and "Joe".  Notice that when creating a dictionary we separate the key from the value with a ":".  We separate the key-value entries with a comma.
+
+With either of the above, we can add to the dictionary using the `[]` operators.  This works much like sequence types, except instead of an integer we provide some other type as the key (often a string but it doesn't have to be):
+
+```python
+phone_numbers["New Guy"] = 6165551234
+```
+
+This creates a new key - "New Guy", and sets its mapped value to whatever is on the right side of the equal sign.  Similarly, we can access data from a dictionary using the indice operator:
+
+```python
+print(phone_numbers["Jenny"])		# Will print out 6168675309
+```
+
 
