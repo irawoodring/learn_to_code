@@ -152,7 +152,7 @@ print(my_nums[2])		# Outputs 20
 
 ## The Mapping Type
 
-Sometimes it doesn't make sense for us to refer to look up our data by number.  Think about a contact list for instance, you don't want to remember that your mom's phone number is at index 5.  Instead, you want to lookup based on her name.  In Python we do this with a **dictionary**.  We call a dictionary a mapping type because it maps keys to values - so in our example the key would be your mom's name, and the value would be her phone number.
+Sometimes it doesn't make sense for us to look up our data by number.  Think about a contact list for instance, you don't want to remember that your mom's phone number is at index 5.  Instead, you want to lookup based on her name.  In Python we do this with a **dictionary**.  We call a dictionary a mapping type because it maps keys to values - so in our example the key would be your mom's name, and the value would be her phone number.
 
 We create a dictionary in Python using the curly braces `{}`.  This is sometimes confusing to new programmers, because (as we will see in the next section), Python also uses curly braces for sets.  We can create an empty dictionary with the code:
 
