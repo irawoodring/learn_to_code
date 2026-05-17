@@ -1,7 +1,3 @@
----
-author: ""
----
-
 # Glossary
 
 **2D Array/2D List**
@@ -629,6 +625,10 @@ The rules that define the structure and format of valid statements in a programm
 **Tail Recursion**
 
 A recursive call that is the very last operation in the method. Some compilers/runtimes optimize this to avoid stack growth.
+
+**Technical Debt**
+
+The accumulated cost of shortcuts, quick fixes, and suboptimal decisions made during software development that cause maintenance issues later on.
 
 **Time Complexity**
 
