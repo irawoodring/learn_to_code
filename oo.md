@@ -97,3 +97,68 @@ def set_name(self, name):
 A few things to note here - we tested type *before* we tested value.  If we had tried to test the length first, and the user had passed in a number, the program could have crashed because you can't get the length of a number (it isn't a collection).  Always test type before you test values.  We raised exceptions of the appropriate kind if our rules were violated - a `TypeError` if `name` wasn't a string, and a `ValueError` otherwise.  And we raised them with appropriate messages.  Finally, we only changed our private data to the value passed into the method if all of our tests passed.  This is encapsulation in a nutshell - we've wrapped access to our data behind methods that understand how to work on it safely.  We want to make sure that the rules for our data are never violated.
 
 ## Properties
+
+There is nothing inherently wrong with getters and setters.  However, calling them can get cumbersome and a bit verbose.  Imagine we rewrote our constructor function to take parameters:
+
+```python
+class Spaceship:
+  def __init__(self, name="Default Name", hp=1000, shield=1.0):
+```
+
+This would make it easier for users to create new instances of the `Spaceship` class.  But now, since users can pass values into the constructor, we need to validate the data they send.  So we need to call our setters, since that is where the code that validates our data is stored:
+
+```python
+class Spaceship:
+  def __init__(self, name="Default Name", hp=1000, shield=1.0):
+    self.set_name(name)
+    self.set_hp(hp)
+    self.set_shield(shield)
+```
+
+This code can be a bit confusing.  For one thing, it doesn't make clear that we are creating instance variables in our constructor.  True, a user could look up each function and see that that is what is happening - but there is no context clue in this local piece of code that shows we are setting a value.  Secondly, the three lines all start with the string `self.set_`, which can be a bit confusing for our brains to look at and decode.  Some languages (like Python), give us a different way of doing the same thing, but with an easier to read syntax.  We call these **properties**.  A property is a way to define an attribute on a class that runs a method behind the scenes when you read or write it, while still looking like a plain attribute (instance variable) to the caller.
+
+We define a read property with the `@property` annotation:
+
+```python
+@property
+def name(self):
+  return self.__name
+```
+
+You may notice that other than the annotation, that the only thing that changed was the signature get_name(self)` became `name`.  But now, we can read the value of `self.__name` as if it were a public variable.  For instance, if we had still had our ship named `falcon`, we could write:
+
+```python
+print(falcon.name)
+```
+
+And `Millennium Falcon` would print.  We can similarly create a setter to add write access to our variable:
+
+```python
+@name.setter
+def name(self, name):
+  if not isinstance(name, str):
+    raise TypeError("Name must be a string.")
+  if len(name) < 3 or len(name) > 25:
+    raise ValueError("Name must be between 3 and 20 characters.")
+  self.__name = name
+```
+
+Again, the only parts that changed are the annotation and method signature.  The validation code is all still the same.  Our annotation must be of the form `<PROPERTY_NAME>.setter`.  Now, we can write to `self.__name` as if it were a public variable:
+
+```python
+self.name = "Falcon"
+```
+
+This will automatically call our setter code to ensure that the value on the right of the equals sign was valid.  Once all three properties are written, we can rewrite our constructor:
+
+```python
+class Spaceship:
+  def __init__(self, name="Default Ship", hp=1000, shield=1.0):
+    self.name = name
+    self.hp = hp
+    self.shield = shield
+```
+
+This code is much cleaner and takes less time to write.  Further, we are using variable assignment syntax, so we've provided a context clue that our code is creating instance variables.  Overall, this code should be easier to read and maintain.
+
+
