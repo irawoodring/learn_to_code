@@ -176,15 +176,15 @@ class Spaceship:
         name: A non-empty string of 3–20 characters identifying the ship.
         hp: Hull points representing remaining structural integrity; must
             be a positive integer.
-        shield_level: Shield strength expressed as a percentage fraction
+        shield: Shield strength expressed as a percentage fraction
             between 0.0 (no shields) and 1.0 (full shields).
 
     Example:
-        >>> ship = Spaceship(name="Avalon", hp=500, shield_level=0.75)
+        >>> ship = Spaceship(name="Avalon", hp=500, shield=0.75)
         >>> print(ship)
         Spaceship | Name: 'Avalon' | HP: 500 | Shield: 75.0%
         >>> ship.hp -= 100
-        >>> ship.shield_level = 0.5
+        >>> ship.shield = 0.5
         >>> print(ship)
         Spaceship | Name: 'Avalon' | HP: 400 | Shield: 50.0%
     """
@@ -194,13 +194,13 @@ class Spaceship:
     MIN_SHIELD = 0.0
     MAX_SHIELD = 1.0
 
-    def __init__(self, name: str, hp: int, shield_level: float) -> None:
+    def __init__(self, name: str, hp: int, shield: float) -> None:
         """Initializes Spaceship with validated attributes.
 
         Args:
             name: A non-empty string between 3 and 20 characters.
             hp: Hull points; must be a positive integer.
-            shield_level: Shield percentage as a float between 0.0 and 1.0.
+            shield: Shield percentage as a float between 0.0 and 1.0.
 
         Raises:
             TypeError: If any argument is of the wrong type.
@@ -208,7 +208,7 @@ class Spaceship:
         """
         self.name = name
         self.hp = hp
-        self.shield_level = shield_level
+        self.shield = shield
 
     # --- name property -------------------------------------------------
 
@@ -253,20 +253,20 @@ class Spaceship:
     # --- shield property -----------------------------------------------------
 
     @property
-    def shield_level(self) -> float:
+    def shield(self) -> float:
         """float: Shield strength as a fraction between 0.0 and 1.0."""
         return self.__shield
 
-    @shield_level.setter
-    def shield_level(self, value: float) -> None:
+    @shield.setter
+    def shield(self, value: float) -> None:
         if isinstance(value, bool) or not isinstance(value, (int, float)):
             raise TypeError(
-                f"shield_level must be a float, got {type(value).__name__}."
+                f"shield must be a float, got {type(value).__name__}."
             )
         value = float(value)
         if not (self.MIN_SHIELD <= value <= self.MAX_SHIELD):
             raise ValueError(
-                f"shield_level must be between {self.MIN_SHIELD} and "
+                f"shield must be between {self.MIN_SHIELD} and "
                 f"{self.MAX_SHIELD}, got {value}."
             )
         self.__shield = value
@@ -295,7 +295,7 @@ class Spaceship:
             f"Spaceship("
             f"name={self.__name!r}, "
             f"hp={self.__hp!r}, "
-            f"shield_level={self.__shield!r})"
+            f"shield={self.__shield!r})"
         )
 
     def __eq__(self, other: object) -> bool:
@@ -306,14 +306,14 @@ class Spaceship:
 
         Returns:
             True if other is a Spaceship with identical name, hp, and
-            shield_level; False otherwise.
+            shield; False otherwise.
         """
         if not isinstance(other, Spaceship):
             return NotImplemented
         return (
             self.__name == other._name
             and self.__hp == other._hp
-            and self.__shield == other._shield_level
+            and self.__shield == other._shield
         )
 
     def __lt__(self, other: "Spaceship") -> bool:
