@@ -48,8 +48,52 @@ We need to make a change to the way we created instance variables in the example
 
 The problem with our code currently is that we have named our variables in such a way that other programmers will think it is **public** - available for any piece of code written by anyone to access and modify.  Many languages will require you to note whether a variable is public with a keyword; Python simply uses a naming convention.  The rules of the convention are:
 
-- variables and methods named with two underscores in front of them, i.e. `self.__name`` are **private** and should only be accessed by objects of that type.
+- variables and methods named with two underscores in front of them, i.e. `self.__name` are **private** and should only be accessed by objects of that type.
 - variables and methods named with a single underscore in front of them, `self._name` are considered **protected**.   Protected means data should only be accessed and modified by objects of that type or one of their subtypes.  We will talk about subtypes in the chapter on inheritance.
 - variables and methods named with no underscore are considered public.
 
-For now, we are only going to talk about public and private variables and methods.
+For now, we are only going to talk about public and private variables and methods.  We are going to mark our data as private:
+
+```python
+class Spaceship:
+  def __init__(self):
+    self.__name = "Default Name"
+    self.__hp = 1000
+    self.__shield = 1.0
+```
+
+Now we need to provide methods to access our data.  Python provides two styles of methods - getters/setters, and properties.  They do the same things, but properties are easier to use.  We will illustrate each style in the sections that follow.
+
+## Getters and Setters
+
+A getter usually just returns a value.  If we don't want the values to be seen, we don't provide a getter.  They will typically be named with the `get_` and the variable name in Python:
+
+```python
+def get_name(self):
+  return self.__name
+```
+
+If we want to allow our data to be changed, we can provide a setter.  They will be named (usually) `set_` and the name of our variable.  But here is where things can get tricky, as not every value a user passes in will be valid for our purposes.  For instance, for the `name`, we might want to have some criteria for what makes a valid name.  We want to make sure first and foremost that the user actually passed a string to us, and not a number or other type.  Python lets us check a type with the `isinstance()` function:
+
+```python
+def set_name(self, name):
+  if not isinstance(name, str):
+    raise TypeError("Name must be a string.") 
+```
+
+In languages that are **statically typed**, the types are usually checked by the programming language before the program is run.  Python is a **dynamically typed** language, meaning types are assigned to variables when we use them - i.e. when the program is running.  Therefore we need to check the types ourselves.
+
+But, we still aren't done.  Just because we got a string doesn't mean we got a valid string.  We probably don't want an empty string - "" as a ship name.  We also may not want a name that is too long.  For our purposes, let's say that a ship name must be between 3 and 20 characters long.  To ensure that is the case, we will check the value passed into our setter to ensure it is ok before we accept it:
+
+```python
+def set_name(self, name):
+  if not isinstance(name, str):
+    raise TypeError("Name must be a string.")
+  if len(name) < 3 or len(name) > 25:
+    raise ValueError("Name must be between 3 and 20 characters.")
+  self.__name = name
+```
+
+A few things to note here - we tested type *before* we tested value.  If we had tried to test the length first, and the user had passed in a number, the program could have crashed because you can't get the length of a number (it isn't a collection).  Always test type before you test values.  We raised exceptions of the appropriate kind if our rules were violated - a `TypeError` if `name` wasn't a string, and a `ValueError` otherwise.  And we raised them with appropriate messages.  Finally, we only changed our private data to the value passed into the method if all of our tests passed.  This is encapsulation in a nutshell - we've wrapped access to our data behind methods that understand how to work on it safely.  We want to make sure that the rules for our data are never violated.
+
+## Properties
