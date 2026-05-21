@@ -166,7 +166,12 @@ This code is much cleaner and takes less time to write.  Further, we are using v
 There are a lot of commong operations we might wish to perform on objects.  We may wish to print out a human-readable representation of them, for instance.  Or compare two objects of the same type in some way.  For the `Spaceship`, that might be checking to see if the `hp` of one is larger or smaller than another when they are attacking, or to sort a collection of ships by one of their attributes.  Python has quite a few of these special purpose methods.  When you make an object, you might get default versions of some of these methods.  For instance, if we use `dir()` on an instance of `Spaceship`, you will see output similar to this:
 
 ```python
-'__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__', '__weakref__'
+'__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__',
+'__firstlineno__', '__format__', '__ge__', '__getattribute__', '__getstate__', 
+'__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__',
+'__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', 
+'__setattr__', '__sizeof__', '__static_attributes__', '__str__', '__subclasshook__',
+'__weakref__'
 ```
 
 Notice how each of these methods start and end with double underscores?  Because of this, we call them **dunder** (double underscore) methods.  We won't go into what all of them do here.  Instead, we will list the more commonly used ones.  Those are usually:
