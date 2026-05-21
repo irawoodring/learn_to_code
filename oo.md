@@ -176,6 +176,7 @@ There are a lot of commong operations we might wish to perform on objects.  We m
 
 Notice how each of these methods start and end with double underscores?  Because of this, we call them **dunder** (double underscore) methods.  We won't go into what all of them do here.  Instead, we will list the more commonly used ones.  Those are usually:
 
+- `__bool__` - Defines the truthiness of an object, called by bool() and evaluated in any boolean context such as `if ship:`, `while ship:`, or `not ship`. Should always return `True` or `False`.  If `__bool__` is not defined, Python falls back to `__len__` (the object is `False` if its length is 0). If neither is defined, all instances of the class are considered `True` by default.
 - `__eq__` - Defines behavior for the `==` operator. Without it, Python defaults to identity comparison, meaning two variables are only considered equal if they point to the exact same object in memory. By defining `__eq__`, you can instead compare objects by their attribute values, so two separate instances with the same data will evaluate as equal.
 - `__ge__` - Defines behavior for the `>=` (greater than or equal to) operator.
 - `__hash__` - Defines the integer hash value returned by `hash()`. Required for objects to be usable as dictionary keys or set members. Critically, Python's rule is that objects that compare equal must have the same hash. If you define `__eq__`, Python will set `__hash__` to `None` (making the object unhashable) unless you also explicitly define `__hash__`.
