@@ -176,14 +176,14 @@ There are a lot of commong operations we might wish to perform on objects.  We m
 
 Notice how each of these methods start and end with double underscores?  Because of this, we call them **dunder** (double underscore) methods.  We won't go into what all of them do here.  Instead, we will list the more commonly used ones.  Those are usually:
 
-- `__eq__` - Defines behavior for the == operator. Without it, Python defaults to identity comparison, meaning two variables are only considered equal if they point to the exact same object in memory. By defining __eq__, you can instead compare objects by their attribute values, so two separate instances with the same data will evaluate as equal.
-- `__ge__` - Defines behavior for the >= (greater than or equal to) operator. Like __le__, it is not automatically derived and must be defined explicitly.
-- `__hash__` - Defines the integer hash value returned by hash(). Required for objects to be usable as dictionary keys or set members. Critically, Python's rule is: objects that compare equal must have the same hash. If you define __eq__, Python will set __hash__ to None (making the object unhashable) unless you also explicitly define __hash__.
-- `__le__` - Defines behavior for the <= (less than or equal to) operator. Not automatically derived from __lt__ and __eq__ — must be defined explicitly if needed.
-- `__lt__` - Defines behavior for the < (less than) operator. Also used by sorted() and min()/max() when no key is provided, making it the most important comparison dunder to implement if you want sortable objects.
-- `__ne__` - Defines behavior for the != operator. By default Python automatically derives it as the inverse of __eq__, but you can override it for custom not-equal logic.
-- `__repr__` - Defines the "official" or developer-facing string representation. Called by repr() and shown in the REPL. The goal is an unambiguous string, ideally one that could be copy-pasted to reconstruct the object. If __str__ is not defined, Python falls back to __repr__.
-- `__str__` - Defines the "informal" or human-readable string representation of an object. Called by print() and str().
+- `__eq__` - Defines behavior for the `==` operator. Without it, Python defaults to identity comparison, meaning two variables are only considered equal if they point to the exact same object in memory. By defining `__eq__`, you can instead compare objects by their attribute values, so two separate instances with the same data will evaluate as equal.
+- `__ge__` - Defines behavior for the `>=` (greater than or equal to) operator.
+- `__hash__` - Defines the integer hash value returned by `hash()`. Required for objects to be usable as dictionary keys or set members. Critically, Python's rule is that objects that compare equal must have the same hash. If you define `__eq__`, Python will set `__hash__` to `None` (making the object unhashable) unless you also explicitly define `__hash__`.
+- `__le__` - Defines behavior for the `<=` (less than or equal to) operator.
+- `__lt__` - Defines behavior for the `<` (less than) operator. Also used by `sorted()` and `min()`/`max()` when no key is provided, making it the most important comparison dunder to implement if you want sortable objects.
+- `__ne__` - Defines behavior for the `!=` operator. By default Python automatically derives it as the inverse of `__eq__`, but you can override it for custom not-equal logic.
+- `__repr__` - Defines the "official" or developer-facing string representation. Called by `repr()` and shown in the REPL. The goal is an unambiguous string, ideally one that could be copy-pasted to reconstruct the object. If `__str__` is not defined, Python falls back to `__repr__`.
+- `__str__` - Defines the "informal" or human-readable string representation of an object. Called by `print()` and `str()`.
 
 Let's create these now, and finish up the `Spaceship` class!
 
