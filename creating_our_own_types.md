@@ -125,7 +125,7 @@ def name(self):
   return self.__name
 ```
 
-You may notice that other than the annotation, that the only thing that changed was the signature get_name(self)` became `name`.  But now, we can read the value of `self.__name` as if it were a public variable.  For instance, if we had still had our ship named `falcon`, we could write:
+You may notice that other than the annotation, that the only thing that changed was the signature `get_name(self)` became `name`.  But now, we can read the value of `self.__name` as if it were a public variable.  For instance, if we had still had our ship named `falcon`, we could write:
 
 ```python
 print(falcon.name)
