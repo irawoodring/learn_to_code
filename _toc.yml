@@ -6,6 +6,6 @@ chapters:
 - file: what_is_a_computer
 - file: variables
 - file: collections
-- file: oo
+- file: creating_our_own_types
 - file: glossary
 - file: python_playground
