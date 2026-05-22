@@ -1,4 +1,4 @@
-# Chapter 1 - What is a computer anyway?
+# What is a computer anyway?
 
 Most people have an idea of what a computer is, though they might have trouble giving a formal definition.  When asked, they might say a computer is a box that sits on your desk or lap and allows us to access the Internet, chat with friends, play games, and get work done.  For our purposes though, we need to go a bit deeper, so that we have a firm foundation of knowledge to start building on.  We will start with a very simple definition, and over the course of this text our definition will grow.  For now though, A computer is *a machine built to perform math*.  Our definition will grow as our understanding grows; for now though, let's see why this definition makes sense.
 

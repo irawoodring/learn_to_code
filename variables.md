@@ -1,4 +1,4 @@
-# Chapter 2 - An Introduction to Variables
+# An Introduction to Variables
 
 As mentioned in the last chapter, computers store data in their memory.  At its deepest level, memory is just electricity in circuits.  While not entirely true, we can think of memory as being made up of many locations, with each location able to either be empty or store electricity.  We tend to call these locations **bits** which is a shortening of the words for "binary digit".  We usually think of a location storing no electricity as holding a '0' and a location with electricity as holding a '1'.  Again, this is an oversimplification, but it works to help us build a mental model of how memory works.
 
