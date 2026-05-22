@@ -1,4 +1,4 @@
-# Object-Oriented Programming
+# Creating Our Own Types (Classes and Objects) 
 
 Thus far, our programming style has been to create sequences of commands almost like a recipe for the computer to follow.  Originally that was the only way to communicate with computers - and at their core still is.  We call the model of programming where we give sequences of command **imperative** programming.  However, humans don't think that way.  Anyone who has tried to cook from a recipe has probably learned this truth the hard way - we often forget ingredients or miss steps.  The same thing happens when we try to build something from a set of instructions. In the 1960s, a computer scientest named Alan Kay theorized that the reason this happens is that humans don't naturally think in terms of processes.  We understand them, but the way we view and interact with our world is different.
 
@@ -338,9 +338,9 @@ class Spaceship:
         if not isinstance(other, Spaceship):
             return NotImplemented
         return (
-            self.__name == other._name
-            and self.__hp == other._hp
-            and self.__shield == other._shield
+            self.__name == other.__name
+            and self.__hp == other.__hp
+            and self.__shield == other.__shield
         )
 
     def __lt__(self, other: "Spaceship") -> bool:
@@ -357,7 +357,7 @@ class Spaceship:
         """
         if not isinstance(other, Spaceship):
             return NotImplemented
-        return self.__hp < other._hp
+        return self.__hp < other.__hp
 
     def __le__(self, other: "Spaceship") -> bool:
         """Compares spaceships by HP (less than or equal).
@@ -373,7 +373,7 @@ class Spaceship:
         """
         if not isinstance(other, Spaceship):
             return NotImplemented
-        return self.__hp <= other._hp
+        return self.__hp <= other.__hp
 
     def __gt__(self, other: "Spaceship") -> bool:
         """Compares spaceships by HP (greater than).
@@ -389,7 +389,7 @@ class Spaceship:
         """
         if not isinstance(other, Spaceship):
             return NotImplemented
-        return self.__hp > other._hp
+        return self.__hp > other.__hp
 
     def __ge__(self, other: "Spaceship") -> bool:
         """Compares spaceships by HP (greater than or equal).
@@ -405,7 +405,7 @@ class Spaceship:
         """
         if not isinstance(other, Spaceship):
             return NotImplemented
-        return self.__hp >= other._hp
+        return self.__hp >= other.__hp
 
     def __bool__(self) -> bool:
         """Evaluates the ship's operational status.
@@ -423,4 +423,59 @@ class Spaceship:
             An integer hash value.
         """
         return hash((self.__name, self.__hp, self.__shield))
+
 ```
+
+
+## Using the `Spaceship` Class
+
+Now that we have a complete `Spaceship` class, let's see how we can use it. Recall from earlier in this chapter that we call the constructor by using the class name.  Now that we have a constructor that can take parameters, we will pass the values we wish to use for the class in the call: 
+
+```python
+firefly = Spaceship("Serenity", 1000, 1.0)
+falcon = Spaceship("Millennium Falcon", 750, 1.0)
+enterprise = Spaceship("Enterprise", 1500, 1.0)
+```
+
+Printing each of these results in the output:
+
+```python
+Spaceship | Name: 'Serenity' | HP: 1000 | Shield: 100.0%
+Spaceship | Name: 'Millennium Falcon' | HP: 750 | Shield: 100.0%
+Spaceship | Name: 'Enterprise' | HP: 1500 | Shield: 100.0%
+```
+
+While the `__repr__` for each would output:
+
+```python
+"Spaceship(name='Serenity', hp=1000, shield=1.0)"
+"Spaceship(name='Millennium Falcon', hp=750, shield=1.0)"
+"Spaceship(name='Enterprise', hp=1500, shield=1.0)"
+```
+
+Our comparison operators work as well.  We won't print the output from every possible comparison, but here are a few comparisons and what they result with:
+
+```python
+firefly > falcon		# True
+enterprise < firefly		# False
+enterprise == falcon		# False
+falcon == falcon		# True
+firefly != falcon		# True
+falcon <= firefly		# True
+```
+
+We can even hash our objects, which allows us to use them as dictionary keys (among other uses):
+
+```python
+hash(firefly)			# -5220248866166253478
+hash(falcon)			# 6271764174197419405
+hash(enterprise)		# 7382750676208440033
+```
+
+Note that your hashes may not be the same as mine - that's ok and normal Python behavior!
+
+## Final Thoughts
+
+You may not always need as complete a class as we presented here.  And, sometimes you might need one that has even more behavior.  The `Spaceship` class is just an example of what you can do, and how you can do it.
+
+Moving forward, we will learn how classes interact with one another, and how we can create new classes by customizing existing ones - without rewriting the entire class.
