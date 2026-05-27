@@ -44,7 +44,9 @@ For every additional branch we increase the complexity - sometimes exponentially
 
 Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**:
 
-:::{./images/flow_graph.png
+:::{figure} ./images/flow_graph.png
 :width: 100%
 :align: center
+
+Figure 1: Sample flow graph with two branches.
 :::
