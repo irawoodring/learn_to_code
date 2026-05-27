@@ -34,7 +34,7 @@ def my_function(self):
 Looking closely at this pseudocode, we can see that there are two paths of execution through the function - either `some_check()` returns `True` and the first code block runs, or it returns `False` and the second code block runs.  This is an example of **cyclomatic comlexity** - the number of independent paths through a function.  Now, imagine that a few lines below this code there is another `if` statement check - now there are four paths through the code.  The possible paths are:
 
 |First Path Result|Second Path Result|
-|=================|==================|
+|----------------|-------------------||
 | `True`          | `True`           |
 | `True`          | `False`          |
 | `False`         | `True`           |
@@ -42,4 +42,4 @@ Looking closely at this pseudocode, we can see that there are two paths of execu
 
 For every additional branch we increase the complexity - sometimes exponentially.  Complex code is hard to maintain.  As we've already talked about in this book, humans aren't great at long, complicated processes.  We just don't think that way.  As cyclomatic complexity increases, so do the number of bugs.
 
-Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**. ![Sample flow graph](./images/flow_graph.png).
+Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**. ![Sample flow graph](./images/flow_graph.png){align=center w=100%}.
