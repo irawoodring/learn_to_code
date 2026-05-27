@@ -42,4 +42,9 @@ Looking closely at this pseudocode, we can see that there are two paths of execu
 
 For every additional branch we increase the complexity - sometimes exponentially.  Complex code is hard to maintain.  As we've already talked about in this book, humans aren't great at long, complicated processes.  We just don't think that way.  As cyclomatic complexity increases, so do the number of bugs.
 
-Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**. ![Sample flow graph](./images/flow_graph.png){w=500px}.
+Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**:
+
+:::{./images/flow_graph.png
+:width: 100%
+:align: center
+:::
