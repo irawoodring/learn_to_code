@@ -31,10 +31,10 @@ def my_function(self):
     ... run this code instead ...
 ```
 
-Looking closely at this pseudocode, we can see that there are two paths of execution through the function - either `some_check()` returns `True` and the first code block runs, or it returns `False` and the second code block runs.  This is an example of **cyclomatic comlexity** - the number of independent paths through a function.  Now, imagine that a few lines below this code there is another `if` statement check - now there are four paths through the code.  The possible paths are:
+Looking closely at this pseudocode, we can see that there are two paths of execution through the function - either `some_check()` returns `True` and the first code block runs, or it returns `False` and the second code block runs.  This is an example of **cyclomatic complexity** - the number of independent paths through a function.  Now, imagine that a few lines below this code there is another `if` statement check - now there are four paths through the code.  The possible paths are:
 
-|First Path Result|Second Path Result|
-|----------------|-------------------||
+| First Path Result | Second Path Result |
+|-----------------|------------------|
 | `True`          | `True`           |
 | `True`          | `False`          |
 | `False`         | `True`           |
