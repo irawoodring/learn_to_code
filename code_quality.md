@@ -19,7 +19,7 @@ While there are a great many metrics available, we will be learning about the fo
 - Standards Compliance
 - Documentation Quality
 
-# Cyclomatic Complexity
+### Cyclomatic Complexity
 
 Imagine you have a function called `my_function`.  It does something really important and novel.  In your function, you have an `if`-statement:
 
