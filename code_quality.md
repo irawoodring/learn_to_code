@@ -1,8 +1,10 @@
-# Code Quality
+# Code Quality Metrics
 
 Designing code that is maintainable is a struggle.  Many projects have been doomed by poor design choices, or worse - continued to limp along for years or decades when it should have been abandoned in favor of a rewrite.  Often people don't realize the cost of **technical debt** - choices made early on (often for the sake of expediency or to save a tiny bit of money now), that cost us enormous amounts of time and money later on.
 
 As AI takes over more of the low-level programming tasks, humans will undoubtedly trend to the design-side of things.  This means we need to be able to vet code given to us by an AI (or junior programmer) and determine if it is of sufficient quality to merge into our code base.  To aid us in that endeavor are code quality metrics.
+
+## Metrics
 
 No single metric can tell you if your code is "good enough".  There are many facets of our code that we can measure, and sometimes an increase in one metric can cause a decrease in another.  As an architect of a system, you must determine what you or your organization needs.  In grad school, I had a professor who had worked for Boeing.  She used to constantly remind us that it is completely possible to build an airplane that is essentially crash-proof.  The reason we don't is that it would cost too much to do so.  As sad a statement as that is, it is largely true - given a limited set of resources we must optimize to get the most good out of them.  And we will always lack resources.
 
