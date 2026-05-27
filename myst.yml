@@ -14,7 +14,3 @@ site:
   options:
     logo_text: Learning to Code in the Age of AI
     favicon: ./images/favicon.ico
-myst_enable_extensions = [
-    "attrs_inline",
-]
-
