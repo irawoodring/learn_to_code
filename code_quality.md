@@ -358,6 +358,21 @@ Source code:
 
 </details>  
 
+If we put this code into a file called `process_command.py`, we can run the command:
+
+```python
+radon cc code_samples/process_command.py -s
+```
+
+to measure its cyclomatic complexity.  Radon outputs the following:
+
+```python
+code_samples/process_command.py
+    F 1:0 process_player_input - F (77)
+``` 
+
+The first 'F' means process_player_input is a function.  The second 'F' means our complexity is over 26 - in this case it is 77.  This is a function that desperately needs a rewrite.  As the purpose of this chapter is not to compare alternative coding methods, but rather to introduce code quality metrics, we won't provide an alternative here.  For those with the free time and interest in how to make this sample better, find a good article on the Command Pattern.
+
 ### Test Coverage
 
 I started a job many years ago as a systems programmer for a small department that was part of a larger organization.  A few weeks in, I had started coding a project when my boss called.  He asked how the project was going, and I told him, "Great!  I just need to finish writing test cases."  He replied, "We don't do that here, just hack it together and make it work."  I was a bit surprised, as I was taught to always test your code.  A few years later (after my boss had retired), our department was merged into the larger organization's I.T. infrastructure.  Almost immediately, code my boss had written began to fail as we tried to integrate it into the larger ecosystem.  Bugs and security vulnerabilities were rampant in his code (in his defense his training was in business, not computer science).  Ultimately, almost everything he had written had to be scrapped.
