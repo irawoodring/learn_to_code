@@ -68,6 +68,7 @@ To calculate the cyclomatic complexity (and a few other metrics), we can use the
 
 <details>
 <summary>
+</summary>
 ```python
  def process_player_input(command, player, world):
     command = command.lower().strip()
@@ -352,7 +353,6 @@ To calculate the cyclomatic complexity (and a few other metrics), we can use the
     else:
         return "Unknown command."
 ```
-</summary>
 </details>  
 
 ### Test Coverage
