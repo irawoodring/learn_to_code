@@ -190,7 +190,7 @@ Let's create these now, and finish up the `Spaceship` class!
 
 ## Finishing Up the Spaceship Class
 
-Here is a final version of the `Spaceship` class, commented according to Google's Python Style Guide:
+Here is a final version of the `Spaceship` class, commented according to [Google's Python Style Guide](https://google.github.io/styleguide/pyguide.html):
 
 :::{literalinclude} code_samples/spaceship.py
 :linenos: 
