@@ -11,7 +11,7 @@ In the chapter "Creating Our Own Types", we introduced the `Spaceship` class.  W
 <summary>Click here to expand the code if you wish to view it.
 
 :::{literalinclude} code_samples/spaceship.py
-:linenos:
+:linenos: 
 :language: python
 :::
 
