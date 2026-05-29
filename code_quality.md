@@ -33,7 +33,7 @@ def my_function(self):
     ... run this code instead ...
 ```
 
-Looking closely at this pseudocode, we can see that there are two paths of execution through the function - either `some_check()` returns `True` and the first code block runs, or it returns `False` and the second code block runs.  This is an example of **cyclomatic complexity** - the number of independent paths through a function.  Now, imagine that a few lines below this code there is another `if` statement check - now there are four paths through the code.  The possible paths are:
+Looking closely at this pseudocode, we can see that there are two paths of execution through the function - either `some_check()` returns `True` and the first code block runs, or it returns `False` and the second code block runs.  This is an example of **cyclomatic complexity** - the number of independent paths through a function.  Now, imagine that a few lines below this code there is another `if`-statement check - now there are four paths through the code.  The possible paths are:
 
 | First Path Result | Second Path Result |
 |-----------------|------------------|
@@ -52,3 +52,16 @@ Calculating this type of complexity usually involves a **node-edge** graph calle
 
 Figure 1: Sample flow graph with two branches.
 :::
+
+If we view each of the arrows in the diagram as edges of a graph, and the other shapes as nodes, we can use the formula
+
+$$M = E - N + 2$$
+
+to calculate the cyclomatic complexity.  For our simple example here, that would be 
+
+$$M = 10 - 9 + 2$$
+$$M = 3$$
+
+A value less than $10$ is generally considered a simple function with low risk.  However, with all metrics, the number needs to be considered in the context of other factors and along with other metrics.
+
+
