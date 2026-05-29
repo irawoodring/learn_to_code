@@ -53,7 +53,7 @@ Calculating this type of complexity usually involves a **node-edge** graph calle
 Figure 1: Sample flow graph with two branches.
 :::
 
-If we view each of the arrows in the diagram as edges of a graph, and the other shapes as nodes, we can use the formula
+If we view each of the arrows in the diagram as edges of a graph ($E$), and the other shapes as nodes ($N$), we can use the formula
 
 $$M = E - N + 2$$
 
