@@ -8,6 +8,7 @@ chapters:
 - file: collections
 - file: functions
 - file: creating_our_own_types
+- file: testing_code
 - file: code_quality
 - file: glossary
 - file: python_playground
