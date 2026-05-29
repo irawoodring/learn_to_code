@@ -44,7 +44,7 @@ Looking closely at this pseudocode, we can see that there are two paths of execu
 
 For every additional branch we increase the complexity - sometimes exponentially.  Complex code is hard to maintain.  As we've already talked about in this book, humans aren't great at long, complicated processes.  We just don't think that way.  As cyclomatic complexity increases, so do the number of bugs.
 
-Calculating this type of complexity usually involves a **node-edge** graph called a **flow-graph**:
+Calculating this type of complexity usually involves a **node-edge graph** called a **flow-graph**:
 
 :::{figure} ./images/flow_graph.png
 :width: 100%
@@ -371,7 +371,7 @@ code_samples/process_command.py
     F 1:0 process_player_input - F (77)
 ``` 
 
-The first 'F' means process_player_input is a function.  The second 'F' means our complexity is over 26 - in this case it is 77.  This is a function that desperately needs a rewrite.  As the purpose of this chapter is not to compare alternative coding methods, but rather to introduce code quality metrics, we won't provide an alternative here.  For those with the free time and interest in how to make this sample better, find a good article on the Command Pattern.
+The first 'F' means `process_player_input` is a function.  The second 'F' means our complexity is high - in this case it is 77.  This is a function that desperately needs a rewrite.  As the purpose of this chapter is not to compare alternative coding methods, but rather to introduce code quality metrics, we won't provide an alternative here.  For those with the free time and interest in how to make this sample better, find a good article on the Command Pattern.
 
 ### Test Coverage
 
