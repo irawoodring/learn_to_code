@@ -16,4 +16,4 @@ In the chapter "Creating Our Own Types", we introduced the `Spaceship` class.  W
 :::
 
 </summary>
-<details>
+</details>

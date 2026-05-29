@@ -6,7 +6,7 @@ class Spaceship:
 
     Attributes:
         name: A non-empty string of 3–20 characters identifying the ship.
-        hp: Hull points representing remaining structural integrity; must
+        hp: Health points representing remaining structural integrity; must
             be a positive integer.
         shield: Shield strength expressed as a percentage fraction
             between 0.0 (no shields) and 1.0 (full shields).
@@ -31,7 +31,7 @@ class Spaceship:
 
         Args:
             name: A non-empty string between 3 and 20 characters.
-            hp: Hull points; must be a positive integer.
+            hp: Health points; must be a positive integer.
             shield: Shield percentage as a float between 0.0 and 1.0.
 
         Raises:
@@ -69,7 +69,7 @@ class Spaceship:
 
     @property
     def hp(self) -> int:
-        """int: Hull points; reflects remaining structural integrity."""
+        """int: Health points; reflects remaining structural integrity."""
         return self.__hp
 
     @hp.setter
