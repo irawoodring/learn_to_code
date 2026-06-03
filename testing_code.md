@@ -12,7 +12,6 @@ In the chapter "Creating Our Own Types", we introduced the `Spaceship` class.  W
 :linenos: 
 :language: python
 :::
-:::
 
 So once we have some code, whether it came from a junior developer, an LLM, or even ourselves, how do we know it works?  This is where testing comes into play.  Testing software is one of the most essential parts of creating software - and one that many folks overlook.  Testing is sometimes seen as "not fun", or tedious.  We need to break away from that mindset.
 
@@ -59,6 +58,5 @@ Notice that we didn't pass every possible valid integer in the first test.  In t
 :::{literalinclude} code_samples/test_spaceship.py
 :linenos: 
 :language: python
-:::
 :::
 
