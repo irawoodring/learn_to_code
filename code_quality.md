@@ -375,6 +375,8 @@ I started a job many years ago as a systems programmer for a small department th
 
 The truth is that code that hasn't been tested should be considered broken.  It is also true that it is usually impossible to fully test our code.  There are just too many paths of execution through a program for us to test everything completely.  However, that doesn't mean we shouldn't try to test as much as we can.  **Test Coverage** metrics help us to understand which parts of our code are being tested.
 
+There are different levels of coverage, as we discussed in the "Testing Code" chapter. 
+
 ### Code Duplication
 
 ### Code Churn
