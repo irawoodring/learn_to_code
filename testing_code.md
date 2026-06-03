@@ -54,6 +54,10 @@ In our second testing function, we are still asserting, but more indirectly.  He
 
 Notice that we didn't pass every possible valid integer in the first test.  In this example we could have - running 256 different values wouldn't take that long - but often time constraints will prevent us from doing so.  For our invalid values tests we didn't test every possible invalid integer (there are an infinite number of them!).  We also passed values that are **not** integers; in this case we passed a string, a float, a boolean, and even a `None`.  We expect each of those to result in a `ValueError` being raised by the `Color` instance. 
 
+But how do you pick the values to test?  As we saw, picking every valid and invalid value is usually not possible.  Instead, we want to pick values that are representative of categories of errors we are trying to test for.  For example, we chose the values 0, 1, 127, 254, and 255 for valid values.  These values represent the collection of positive integers between 0 and 255.  It is highly unlikely that we would then need to check other values from that collection, such as 42, 43, 44, etc. since we have already checked a sampling of values that represent the valid collection.  We call this **equivalence partitioning**. We determine the properties of a group of valid or invalid values, then choose samples from that grouping.
+
+Similarly, you may notice that we chose values at the extremes (and just past) of our valid range.  We checked -1, 0, 1, 245, 255, and 256.  These are our **boundary values**.  Programmers often make mistakes near boundary values; it is so simple to accidentally write `if x <= 255` instead of `if x < 255`, for instance.  That means that our tests have a higher likelihood of failing at these boundaries.  Performing tests on those areas is called **boundary value analysis**.
+
 :::{dropdown} Click here if you wish to view the `test_spaceship.py` file.
 :::{literalinclude} code_samples/test_spaceship.py
 :linenos: 
