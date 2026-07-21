@@ -19,7 +19,7 @@ We do this by identifying the following parts of the problem:
 We often illustrate this concept mathematically.  Consider the way you compute the Fibonacci sequence.  The first and second Fibonacci numbers are both 1.  Those are our base cases - they are defined and we don't need to compute them.  They are the simplest version of the problem.  From these, we calculate the rest by adding the previous 2 Fibonacci values together.  If we were keeping a table it would look like this:
 
 |index|value|needed values |
-|=====|=====|=========|
+|-----|-----|--------------|
 | 0   |   1 | defined |
 | 1   |   1 | defined |
 | 2   |   2 | fib(1) + fib(0) |
@@ -32,7 +32,7 @@ and so on.  Notice that for the first two values we didn't perform any computati
 When working from the **bottom-up**, i.e. starting at the base case and proceeding, students usually understand recursion pretty well.  Unfortunately, in computing we are often performing recursion from the **top-down**.  In our Fibonacci example, that simply means we are asked "What is the 5th Fibonacci number?" and we work backwards to our base case.  For some reason this switch in direction often throws students. But let's look at the table and see that it is really the same thing:
 
 |index|value|needed values|
-|=====|=====|=============|
+|-----|-----|-------------|
 | 5   | 8   | fib(4) + fib(3) |
 | 4   | 5   | fib(3) + fib(2) |
 | 3   | 3   | fib(2) + fib(1) |
