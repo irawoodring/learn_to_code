@@ -254,5 +254,6 @@ def list_files_recursive(path):
 
 # Usage: list_files_recursive('/Users/woodriir/Documents')
 ```
-This is exactly how your operating system's "search" functionality works. It doesn't care how deep the folders go; it just keeps asking, "Are there more folders here? If so, do the same thing on those."
+
+Unless it keeps an index or list of files, this is exactly how your operating system's "search" functionality works. It doesn't care how deep the folders go; it just keeps asking, "Are there more folders here? If so, do the same thing on those."
 
