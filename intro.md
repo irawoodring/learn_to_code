@@ -2,6 +2,6 @@
 
 #### Ira Woodring
 
-A textbook for CS1 and CS2 courses.
+A lightweight textbook for CS1 and CS2 courses.
 
 **Work in progress.**
