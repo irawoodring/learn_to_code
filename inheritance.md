@@ -1,4 +1,4 @@
-# Inheritance in Python: A Comprehensive Guide
+# Inheritance in Python
 
 Inheritance is one of the fundamental pillars of Object-Oriented Programming (OOP). In Python, it provides a mechanism where a new class (the subclass or child class) can inherit attributes and methods from an existing class (the superclass or parent class). This promotes the DRY (Don't Repeat Yourself) principle, allows for cleaner code organization, and enables developers to model real-world relationships logically within software.
 
