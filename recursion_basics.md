@@ -46,7 +46,7 @@ $$fib(0) = 1$$
 $$fib(1) = 1$$
 $$fib(n) = fib(n - 1) + fib(n - 2)$$
 
-The first line is our recursive case - the function calling itself.  For instance, to calculate $$fib(5)$$ we need to add $$fib(4)$$ to $$fib(3)$$.  However, since we do't have those values yet, they must be caculated as well.  And so on, until we get to our base case(s).
+The first line is our recursive case - the function calling itself.  For instance, to calculate $fib(5)$ we need to add $fib(4)$ to $fib(3)$.  However, since we do't have those values yet, they must be caculated as well.  And so on, until we get to our base case(s).
 
 What makes recursion so handy is that given the mathematical definition above, we can easily convert to code. In fact, the code is going to look almost exactly like our mathematical definition above:
 
