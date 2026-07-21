@@ -7,6 +7,7 @@ chapters:
 - file: variables
 - file: collections
 - file: functions
+- file: recursion_basics
 - file: creating_our_own_types
 - file: inheritance
 - file: testing_code
