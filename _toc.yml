@@ -10,6 +10,7 @@ chapters:
 - file: recursion_basics
 - file: creating_our_own_types
 - file: inheritance
+- file: polymorphism
 - file: testing_code
 - file: code_quality
 - file: glossary
