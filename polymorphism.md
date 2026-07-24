@@ -120,6 +120,8 @@ render_shapes([Circle(), Square()])
 - Purely Structural: It describes what an object looks like, not what it is. 
  
 # Comparison: ABC vs. Protocol 
+
+So when do we choose an ABC, and when to use a Protocol?  In general:
  
 | Feature     | Abstract Base Classes (ABC)           | Protocols (Structural Typing)                      |
 |-------------|----------------------------------------|-----------------------------------------------------|
