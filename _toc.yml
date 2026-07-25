@@ -13,5 +13,6 @@ chapters:
 - file: polymorphism
 - file: testing_code
 - file: code_quality
+- file: big-o
 - file: glossary
 - file: python_playground
