@@ -1,4 +1,4 @@
-# Chapter: The Language of Complexity - Big-O Notation and Algorithmic Analysis
+# The Language of Complexity - Big-O Notation and Algorithmic Analysis
 
 In the realm of software engineering, writing code that *works* is the baseline requirement. Writing code that *scales* is the hallmark of a professional. As datasets grow from dozens to billions of records, the difference between an algorithm that finishes in milliseconds and one that takes centuries can be the difference between a successful product and a failed project.
 
