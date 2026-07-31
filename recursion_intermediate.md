@@ -107,7 +107,7 @@ def fib(n):
 
 `lru_cache` wraps the function so that every call with a given set of arguments is cached automatically. Behind the scenes, it's doing exactly what our hand-written `cache` dictionary did.  But now, we don't have to worry about it.  Our code stays nice and clean, and still looks almost identical to our mathematical definition of the Fibonacci function.
 
-### Memoization vs. Tabulation (A Preview)
+### Memoization vs. Tabulation
 
 Memoization is *top-down*: you start from the original problem and recurse downward, caching as you go. There's a sibling technique called **tabulation**, which is *bottom-up*: you build a table starting from the base cases and iterate upward until you reach the answer, with no recursion at all.  Again, tabulation is not for recursion, but iteration (our "normal" way of looping).
 
@@ -124,7 +124,7 @@ def fib_tabulation(n):
 
 Both approaches run in $O(n)$ time. Tabulation avoids recursion overhead and stack depth limits entirely, which can matter for very large inputs. Memoization is often more natural to *write*, since it mirrors the recursive definition of the problem directly. You'll see tabulation in more depth when you are in a course that covers dynamic programming formally — for now, just know the two names and how they relate.
 
-### When Should You Reach for Memoization?
+### When Should You Use Memoization?
 
 Ask yourself two questions about a recursive function:
 
@@ -139,7 +139,7 @@ If the answer to both is "yes," memoization is a candidate. If a function is cal
 
 Memoization speeds up recursive algorithms that solve *one* well-defined value. Backtracking is different: it's a strategy for recursive algorithms that must **search through a space of possible solutions** — arrangements, combinations, placements — to find one (or all) that satisfy some constraint.
 
-### The Core Idea
+### The Basic Idea
 
 Backtracking builds a solution incrementally, one choice at a time. At each step, it:
 
@@ -167,7 +167,7 @@ def backtrack(partial_solution):
 
 That "make choice → recurse → undo choice" part is the mainstay of every backtracking algorithm you'll write. If you can identify what a "choice" is, what makes a choice "valid," and what a "complete" solution looks like, you can turn almost any exhaustive search problem into a backtracking algorithm.
 
-### A Warm-Up: Generating Permutations
+### First Example - Generating Permutations
 
 Before tackling 8 queens (the classic backtracking problem), let's build intuition with something smaller: generating all permutations of a list.
 
@@ -219,7 +219,7 @@ Final result:
 [1,2,3], [1,3,2], [2,1,3], [2,3,1], [3,1,2], [3,2,1]
 ```
 
-All $$3! = 6$$ permutations, in the order the tree is explored left-to-right, depth-first. Notice the rhythm: append → recurse deeper → pop, exactly matching the choose/recurse/un-choose pattern from the backtracking template — the pop() after each recursive call is what lets current get reused cleanly across every branch instead of leaking state between them.
+All $3! = 6$ permutations, in the order the tree is explored left-to-right, depth-first. Notice the rhythm: append → recurse deeper → pop, exactly matching the choose/recurse/un-choose pattern from the backtracking template — the pop() after each recursive call is what lets current get reused cleanly across every branch instead of leaking state between them.
 
 ## The Eight Queens Problem
 
@@ -319,7 +319,7 @@ Row 1: . . Q .
 
 Now for row 2: column 0 is diagonal to row 1's queen, column 1 is diagonal to row 0's queen, column 2 is taken, and column 3 is diagonal to row 1's queen. **Every column fails.** This is a dead end — the algorithm backtracks out of row 2, back to row 1, and tries the next column there instead. This single backtrack step is exactly what saves us from exploring the (doomed) rest of that branch.
 
-If you run this trace all the way through, 4 Queens has exactly **2 solutions**. The full 8×8 board has **92 solutions**, which `solve_n_queens(8)` will find in a fraction of a second, despite the search space technically containing 8⁸ (over 16 million) raw placements before pruning.
+If you run this trace all the way through, 4 Queens has exactly **2 solutions**. The full 8×8 board has **92 solutions**, which `solve_n_queens(8)` will find in a fraction of a second, despite the search space technically containing $8^8$ (over 16 million) raw placements before pruning.
 
 ### Complexity
 
