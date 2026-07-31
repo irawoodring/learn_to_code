@@ -36,14 +36,11 @@ Ok, so you've written a great new function and you want to compute its runtime B
 | Atomic Operation | Example | Count |
 |------------------|---------|------:|
 | Assignment | `x = 5` | 1 |
-| Variable read | `y = x` (read `x`) | 1 |
-| Variable write | `x = y` (write `x`) | 1 |
 | Arithmetic | `x + y`, `a * b`, `n - 1` | 1 |
 | Comparison | `x < y`, `a == b`, `i <= n` | 1 |
 | Boolean operation | `&&`, `\|\|`, `!` | 1 |
 | Array indexing | `arr[i]` | 1 |
-| Function return | `return x` | 1 |
-| Constant access | `5`, `'a'`, `true` | 1 |
+| Function return or print | `return x`, print("Hi!") | 1 |
 
 You'll find subtle variations between how people compute Big-O.  That can be confusing; the truth is though, that it doesn't matter that much.  As long as we are consistent in our measurements, we can then compare two algorithms and make the informed choice.  Think of it like this - suppose there are two classrooms and we want to know which one has the most people inside.  It doesn't matter if we count the number in room one by ones and room two by ones and compare, or we count the number in room one by fives and room two by fives and compare.  As long as we used the same value (both counted by ones or both counted by fives), we can still tell which room had more people in it.
 
