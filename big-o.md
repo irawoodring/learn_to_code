@@ -40,7 +40,7 @@ Ok, so you've written a great new function and you want to compute its runtime B
 | Variable write | `x = y` (write `x`) | 1 |
 | Arithmetic | `x + y`, `a * b`, `n - 1` | 1 |
 | Comparison | `x < y`, `a == b`, `i <= n` | 1 |
-| Boolean operation | `&&`, `||`, `!` | 1 |
+| Boolean operation | `&&`, `\|\|`, `!` | 1 |
 | Array indexing | `arr[i]` | 1 |
 | Function return | `return x` | 1 |
 | Constant access | `5`, `'a'`, `true` | 1 |
