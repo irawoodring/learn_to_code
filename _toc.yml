@@ -17,4 +17,4 @@ chapters:
 - file: big-o
 - file: glossary
 - file: python_playground
-- file: [Practice Coding in Your Browser](_static/code_practice.html) 
+- file: code_practice 
