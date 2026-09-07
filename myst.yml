@@ -14,6 +14,3 @@ site:
   options:
     logo_text: Learning to Code in the Age of AI
     favicon: ./images/favicon.ico
-  nav:
-    -title: Practice Coding in Your Browser
-     url: https://irawoodring.github.io/code_practice_site
