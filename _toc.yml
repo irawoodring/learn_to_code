@@ -17,5 +17,5 @@ chapters:
 - file: big-o
 - file: glossary
 - file: python_playground
-- tile: Practice Coding in Your Browser
+- title: Practice Coding in Your Browser
   url: https://irawoodring.github.io/code_practice_site
