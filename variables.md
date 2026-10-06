@@ -37,7 +37,7 @@ Since variables are just made out of bits, we need a way to tell the computer ho
 :name: python-builtin-types
 
 | Type | Description | Example |
-|:-----|:------------|:--------|:---------|
+|:-----|:------------|:--------|
 | `int` | Integer of unlimited precision | `42`, `-7`, `0` |
 | `float` | IEEE 754 double-precision float | `3.14`, `-0.5` |
 | `complex` | Complex number with real and imaginary parts | `3+4j` |
