@@ -36,11 +36,7 @@ site:
     logo_text: Learning to Code in the Age of AI
     favicon: ./images/favicon.ico
   nav:
-    - title: Games
+    - title: Laker Game Labs
       url: https://irawoodring.github.io/learn_to_code/games
     - title: Laker Code Gym 
       url: https://irawoodring.github.io/code_practice_site
-    - title: Exit Status
-      url: https://irawoodring.github.io/exit_status
-    - title: Laker Quest
-      url: https://irawoodring.github.io/laker_quest

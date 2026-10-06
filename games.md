@@ -3,7 +3,17 @@ title: Games
 short_title: Games
 ---
 
-Games I've built to make practicing the material a little more fun. They all run in the browser, with nothing to install.
+## Laker Game Labs
+
+I love making games, and I find a lot of students do as well.  Laker Game Labs is a real-world, experiential learning way for students and myself to work together on the creation of games.  This idea came out of the realization that programming assignments often fail to teach many of the skills needed for industry.  Typical assignments are completed by individuals or small-groups of computing students; it is common in industry for large teams from diverse fields to work together on the creation of products.  The goals of Laker Game Labs are:
+
+- to give students exposure to working on a large-scale project involving a diverse team
+- gaining proficiency in build tools and version control systems
+- giving students greater understand of the entire software development lifecycle
+- generating excitement and enthusiasm for learning
+- making games
+
+Game programming involves some of the toughest challenges in computing.  What follows are games created by myself and by Laker Game Labs.
 
 ## Laker Quest
 
