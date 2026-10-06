@@ -8,6 +8,7 @@ short_title: Games
 ```{figure} images/games/lgl.png
 :alt: Laker Game Labs
 :width: 25%
+```
 
 I love making games, and I find a lot of students do as well.  Laker Game Labs is a real-world, experiential learning way for students and myself to work together on the creation of games.  This idea came out of the realization that programming assignments often fail to teach many of the skills needed for industry.  Typical assignments are completed by individuals or small-groups of computing students; it is common in industry for large teams from diverse fields to work together on the creation of products.  The goals of Laker Game Labs are:
 
