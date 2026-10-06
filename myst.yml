@@ -7,6 +7,27 @@ project:
     - .venv/**
     - .git/**
     - ._build/**
+  # Table of contents (sidebar), in order. Hidden pages are built and can be
+  # linked to, but don't appear in the sidebar.
+  toc:
+    - file: intro.md
+    - file: introduction.md
+    - file: what_is_a_computer.md
+    - file: variables.md
+    - file: collections.md
+    - file: functions.md
+    - file: recursion_basics.md
+    - file: recursion_intermediate.md
+    - file: creating_our_own_types.md
+    - file: inheritance.md
+    - file: polymorphism.md
+    - file: testing_code.md
+    - file: code_quality.md
+    - file: big-o.md
+    - file: glossary.md
+    - file: python_playground.md
+    - file: games.md
+      hidden: true
 site:
   template: book-theme
   parts:
@@ -15,6 +36,8 @@ site:
     logo_text: Learning to Code in the Age of AI
     favicon: ./images/favicon.ico
   nav:
+    - title: Games
+      url: https://irawoodring.github.io/learn_to_code/games
     - title: Laker Code Gym 
       url: https://irawoodring.github.io/code_practice_site
     - title: Exit Status
