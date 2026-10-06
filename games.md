@@ -61,7 +61,7 @@ A terminal-based game for learning the command line. Exit Status runs a full Lin
 
 {button}`Play Exit Status <https://irawoodring.github.io/exit_status>`
 
-% TODO: add an Exit Status screenshot, e.g.
-% ```{figure} images/games/exit-status.png
-% :alt: The Exit Status terminal
-% ```
+```{figure} images/games/exit-status.png
+:alt: The Exit Status terminal
+:width: 60%
+```
