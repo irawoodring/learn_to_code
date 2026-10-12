@@ -28,6 +28,8 @@ project:
     - file: python_playground.md
     - file: games.md
       hidden: true
+    - file: educational.md
+      hidden: true
 site:
   template: book-theme
   parts:
@@ -38,7 +40,7 @@ site:
   nav:
     - title: Laker Game Labs
       url: https://irawoodring.github.io/learn_to_code/games
-    - title: Educational Tools and Gamees 
+    - title: Educational Tools and Games 
       url: https://irawoodring.github.io/learn_to_code/educational
     - title: Laker Linux
       url: https://github.com/irawoodring/laker_linux
